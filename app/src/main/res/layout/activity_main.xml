@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/suchleiste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/textEditFuerAbkZumSuchen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:singleLine="true"
+            android:hint="@string/textedit_hint_abk_suche" />
+        <Button
+            android:id="@+id/buttonStartAbkSuche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:text="@string/button_label_abk_suche"
+            android:onClick="onSuchenButton" />
+
+    </LinearLayout>
+
+    <TextView 
+        android:id="@+id/textViewFuerAnzeigeBedeutungen"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/suchleiste"
+        android:textSize="20sp"
+        android:background="#d0d0d0" />
+    
+    <Button
+        android:id="@+id/buttonNeueAbkEintragen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_below="@id/textViewFuerAnzeigeBedeutungen"
+		android:layout_marginTop="25dp"
+		android:text="@string/button_label_eintrag_anlegen"
+        android:onClick="onNeuEintragButton" />
+
+</RelativeLayout>
