@@ -6,7 +6,11 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 /**
- * Entity für Tabelle mit Bedeutungen.
+ * Entity für Tabelle mit Bedeutungen.<br><br>
+ *
+ * Eine Bedeutung referenziert über eine Fremdschlüsselbeziehung
+ * eine Abkürzung, wobei dieselbe Abkürzung von verschiedenen Bedeutungen referenziert werden
+ * kann.
  * <br><br>
  *
  * This project is licensed under the terms of the BSD 3-Clause License.

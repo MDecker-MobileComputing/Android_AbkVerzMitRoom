@@ -49,16 +49,6 @@ public class NeuerEintragActivity extends AppCompatActivity {
     }
 
     /**
-     * Event-Handler für Button zur Rückkehr zur {@code MainActivity}.
-     *
-     * @param view  Button, der Event ausgelöst hat.
-     */
-    public void onButtonZurueck(View view) {
-
-        finish();
-    }
-
-    /**
      * Event-Handler für "Einfügen"-Button.
      *
      * @param view  Button, der Event ausgelöst hat.
@@ -81,12 +71,14 @@ public class NeuerEintragActivity extends AppCompatActivity {
             return;
         }
 
+        // Entites erstellen
         AbkEntity abkEntity = new AbkEntity();
         abkEntity.abkuerzung = abkuerzungTrimmed.toUpperCase(); // Abkürzung wird auf Großbuchstaben normiert!
 
         BedeutungEntity bedeutungEntity = new BedeutungEntity();
         bedeutungEntity.bedeutung = bedeutungTrimmed;
 
+        // Eigentliche Einfüge-Operation
         boolean ersteBedeutung = _dao.insert(abkEntity, bedeutungEntity);
         if (ersteBedeutung) {
 
@@ -101,6 +93,16 @@ public class NeuerEintragActivity extends AppCompatActivity {
         // Nur Eingabefeld für Bedeutung löschen, weil der Nutzer für Abkürzung vielleicht noch
         // eine weitere Bedeutung eingeben möchte.
         _bedeutungEditText.setText("");
+    }
+
+    /**
+     * Event-Handler für Button zur Rückkehr zur {@code MainActivity}.
+     *
+     * @param view  Button, der Event ausgelöst hat.
+     */
+    public void onButtonZurueck(View view) {
+
+        finish();
     }
 
 }

@@ -16,7 +16,7 @@ public class DialogHelfer {
      *
      * @param context  Context (Selbstreferenz auf aufrufende Activity).
      *
-     * @param title  Dialog-Titel
+     * @param title  Dialog-Titel, z.B. "Fehler".
      *
      * @param nachricht  Eigentlicher Text des Dialogs.
      */

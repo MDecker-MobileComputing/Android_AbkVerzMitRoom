@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     /** Data Access Object für CRUD-Operationen. */
     private AbkVerzDao _dao = null;
 
+
     /**
      * Lifecycle-Methode zur Initialisierung des Activity-Objekts.
      */

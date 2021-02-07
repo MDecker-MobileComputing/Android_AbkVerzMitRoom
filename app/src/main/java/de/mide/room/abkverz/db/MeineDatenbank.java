@@ -29,7 +29,8 @@ public abstract class MeineDatenbank extends RoomDatabase  {
     private static MeineDatenbank SINGLETON_INSTANCE = null;
 
     /**
-     * Getter für DAO.
+     * Getter für DAO (Data Access Object). Die Geschäftslogik der App darf nur über DAOs
+     * auf die Datenbank zugreifen.
      *
      * @return  Objekt für Ausführung CRUD-Operation auf Tabelle mit Lernkarten.
      */
