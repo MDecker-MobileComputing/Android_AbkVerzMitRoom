@@ -6,7 +6,9 @@ import androidx.room.PrimaryKey;
 
 /**
  * Entity für Tabelle mit den Abkürzungen (aber nicht den Bedeutungen!); eine
- * Abkürzung kann eine oder mehrere Bedeutungen referenzieren.
+ * Abkürzung kann eine oder mehrere Bedeutungen referenzieren. Eine Abkürzung
+ * wird über eine Fremschlüsselbeziehung von einer oder mehreren Instanzen
+ * von {@link BedeutungEntity} referenziert.
  * <br><br>
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
