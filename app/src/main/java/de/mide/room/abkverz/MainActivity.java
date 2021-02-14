@@ -23,7 +23,7 @@ import de.mide.room.abkverz.db.MeineDatenbank;
 import static de.mide.room.abkverz.helpers.DialogHelfer.zeigeDialog;
 
 /**
- * Activity zur Abfrage von Abkürzungen.
+ * Haupt-Activity der App; enthält die Funktion zur Abfrage von Abkürzungen.
  * <br><br>
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     /** TextView-Element, mit dem die für eine Abkürzung gefundene Bedeutungen angezeigt werden. */
     private TextView _textViewBedeutungen = null;
 
-    /** Data Access Object für CRUD-Operationen. */
+    /** Data Access Object (DAO) für CRUD-Operationen (Singleton). */
     private AbkVerzDao _dao = null;
 
 
@@ -75,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
     public void onSuchenButton(View view) {
 
         keyboardEinklappen();
-
         _textViewBedeutungen.setText("");
 
         String suchString = _textEditAbkZumSuchen.getText().toString().trim();
@@ -98,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         String ergebnis = "";
         List<BedeutungEntity> bedeutungenListe = abkMitBedeutungen.bedeutungen;
         for (BedeutungEntity bedeutung: bedeutungenListe) {
+
             ergebnis += bedeutung.bedeutung + "\n";
         }
         _textViewBedeutungen.setText(ergebnis);
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
      * Virtuelles Keyboard wieder "einklappen". Lösung nach
      * <a href="https://stackoverflow.com/a/17789187/1364368">dieser Stackoverflow-Antwort</a>.
      */
-    public void keyboardEinklappen() {
+    private void keyboardEinklappen() {
 
         InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
