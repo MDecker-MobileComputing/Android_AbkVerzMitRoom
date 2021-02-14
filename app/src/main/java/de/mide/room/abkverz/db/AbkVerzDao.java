@@ -11,7 +11,7 @@ import java.util.List;
  * Data Access Object für Ausführung der CRUD-Operation auf den DB-Tabellen.
  * <br><br>
  *
- * DAO ist eine abstrakte Klasse und kein Interface, weil eine Methode mit implementierung
+ * DAO ist eine abstrakte Klasse und kein Interface, weil eine Methode mit Implementierung
  * enthalten ist, nämlich {@code insert(AbkEntity, BedeutungEntity)}.
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
