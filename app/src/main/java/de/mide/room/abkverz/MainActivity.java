@@ -1,8 +1,10 @@
 package de.mide.room.abkverz;
 
+import static android.content.Context.INPUT_METHOD_SERVICE;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -72,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void onSuchenButton(View view) {
 
+        keyboardEinklappen();
+
         _textViewBedeutungen.setText("");
 
         String suchString = _textEditAbkZumSuchen.getText().toString().trim();
@@ -97,8 +101,6 @@ public class MainActivity extends AppCompatActivity {
             ergebnis += bedeutung.bedeutung + "\n";
         }
         _textViewBedeutungen.setText(ergebnis);
-
-        keyboardEinklappen();
     }
 
     /**
@@ -115,15 +117,20 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Virtuelles Keyboard wieder "einklappen". Lösung nach
-     * <a href="https://stackoverflow.com/a/17789187/1364368">dieser Antwort</a>
-     * auf <i>stackoverflow.com</i>.
+     * <a href="https://stackoverflow.com/a/17789187/1364368">dieser Stackoverflow-Antwort</a>.
      */
     public void keyboardEinklappen() {
 
-        InputMethodManager imm = (InputMethodManager)
-                getSystemService(Activity.INPUT_METHOD_SERVICE);
+        InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
-        imm.hideSoftInputFromWindow(_textEditAbkZumSuchen.getWindowToken(), 0);
+        View view = getCurrentFocus();
+        if (view == null) {
+
+            view = new View(this);
+        }
+
+        IBinder token = view.getWindowToken();
+        imm.hideSoftInputFromWindow(token, 0);
     }
 
 }
