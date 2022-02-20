@@ -1,7 +1,5 @@
 package de.mide.room.abkverz;
 
-import static android.content.Context.INPUT_METHOD_SERVICE;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.IBinder;
