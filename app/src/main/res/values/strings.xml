@@ -5,6 +5,7 @@
     <string name="textedit_hint_abk_suche">Zu suchende Abk.</string>
     <string name="button_label_abk_suche">Abk. suchen</string>
     <string name="button_label_eintrag_anlegen">Neuen Eintrag anlegen</string>
+    <string name="button_label_zufall">Zufälligen Eintrag anzeigen</string>
 
     <!-- Texte für NeuerEintragActivity -->
     <string name="textedit_hint_abk_neu">Neue Abk.</string>

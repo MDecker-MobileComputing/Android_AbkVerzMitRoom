@@ -8,6 +8,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -111,6 +112,20 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, NeuerEintragActivity.class);
         startActivity(intent);
+    }
+
+    public void onZufallseintragButton(View view) {
+
+        String zufallsAbk = _dao.getZufallsAbk();
+
+        if (zufallsAbk == null) {
+
+            Toast.makeText(this, "Datenbank ist leer", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        _textEditAbkZumSuchen.setText(zufallsAbk);
+        _buttonAbkSuche.performClick();
     }
 
     /**

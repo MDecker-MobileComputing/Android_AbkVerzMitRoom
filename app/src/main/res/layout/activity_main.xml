@@ -29,14 +29,22 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/buttonZufallsEintrag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/suchleiste"
+        android:text="@string/button_label_zufall"
+        android:onClick="onZufallseintragButton" />
+
     <TextView 
         android:id="@+id/textViewFuerAnzeigeBedeutungen"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_below="@id/suchleiste"
+        android:layout_below="@id/buttonZufallsEintrag"
         android:textSize="20sp"
         android:background="#d0d0d0" />
-    
+
     <Button
         android:id="@+id/buttonNeueAbkEintragen"
         android:layout_width="match_parent"
