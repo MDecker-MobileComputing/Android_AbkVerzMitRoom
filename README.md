@@ -1,13 +1,13 @@
 # Android-App "AbkVerz mit Room" #
 
+
 <br>
 
-Simple Android app that demonstrates persistency with 
-[Room](https://developer.android.com/training/data-storage/room/) (Android's ORM). 
-The app can store one or more meanings for an abbrevation, i.e. it demonstrated how to maintain 
-one-to-many relationships in Android. 
-There is another variant of this app which uses SQLite directly (i.e. without Room), see
-[here](https://github.com/MDecker-MobileComputing/Android_AbkVerz).
+Einfache Android-App, die die Persistenz mit [Room](https://developer.android.com/training/data-storage/room/) 
+(dem ORM von Android) demonstriert. Die App kann eine oder mehrere Bedeutungen für eine Abkürzung speichern, 
+d.h. sie demonstriert, wie man One-to-many-Beziehungen in Android aufrechterhalten kann. 
+Es gibt eine andere Variante dieser App, die SQLite direkt (d.h. ohne Room) verwendet, siehe 
+[hier](https://github.com/MDecker-MobileComputing/Android_AbkVerz).
 
 <br>
 
@@ -17,7 +17,7 @@ There is another variant of this app which uses SQLite directly (i.e. without Ro
 
 <br>
 
-![Screenshot 1](screenshot_1.png)  ![Screenshot 2](screenshot_2.png)
+![Screenshot 1](screenshot_1.png) &nbsp; ![Screenshot 2](screenshot_2.png)
 
 <br>
 
