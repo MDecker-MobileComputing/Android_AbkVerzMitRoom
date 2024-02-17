@@ -12,6 +12,7 @@ There is another variant of this app which uses SQLite directly (i.e. without Ro
 <br>
 
 ----
+
 ## Screenshots ##
 
 <br>
@@ -21,6 +22,7 @@ There is another variant of this app which uses SQLite directly (i.e. without Ro
 <br>
 
 ----
+
 ## License ##
 
 <br>

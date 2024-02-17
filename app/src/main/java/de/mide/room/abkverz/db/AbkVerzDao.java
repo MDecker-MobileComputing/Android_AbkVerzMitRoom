@@ -33,8 +33,6 @@ public abstract class AbkVerzDao {
     @Query("SELECT * FROM AbkEntity WHERE abkuerzung = :suchbegriff")
     public abstract AbkMitBedeutungen getBedeutungenFuerAbk(String suchbegriff);
 
-    @Query("SELECT abkuerzung from AbkEntity ORDER BY RANDOM() LIMIT 1")
-    public abstract String getZufallsAbk();
 
     /**
      * Neue Abkürzung in DB-Tabelle einfügen; sollte nur DAO-intern verwendet werden.
@@ -46,6 +44,7 @@ public abstract class AbkVerzDao {
     @Insert
     public abstract long insert(AbkEntity abk);
 
+
     /**
      * Neue Bedeutung in DB-Tabelle einfügen; sollte nur DAO-intern verwendet werden.
      *
@@ -55,6 +54,7 @@ public abstract class AbkVerzDao {
      */
     @Insert
     public abstract long insert(BedeutungEntity bedeutung);
+
 
     /**
      * Methode fügt Abkürzung und erste Bedeutung hinzu, oder fügt weitere

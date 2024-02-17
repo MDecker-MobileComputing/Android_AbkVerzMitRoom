@@ -36,6 +36,7 @@ public abstract class MeineDatenbank extends RoomDatabase  {
      */
     public abstract AbkVerzDao abkverzDao();
 
+
     /**
      * Getter für Singleton-Instanz der vorliegenden Klasse; bei Bedarf wird diese Instanz
      * erzeugt.

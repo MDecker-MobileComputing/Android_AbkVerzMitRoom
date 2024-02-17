@@ -21,6 +21,7 @@ import de.mide.room.abkverz.db.MeineDatenbank;
 
 import static de.mide.room.abkverz.helpers.DialogHelfer.zeigeDialog;
 
+
 /**
  * Haupt-Activity der App; enthält die Funktion zur Abfrage von Abkürzungen.
  * <br><br>
@@ -102,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
         _textViewBedeutungen.setText(ergebnis);
     }
 
+
     /**
      * Event-Handler zur Navigation auf Activity zur Erfassung neuer Abkürzungen und
      * Bedeutungen.
@@ -114,19 +116,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onZufallseintragButton(View view) {
-
-        String zufallsAbk = _dao.getZufallsAbk();
-
-        if (zufallsAbk == null) {
-
-            Toast.makeText(this, "Datenbank ist leer", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        _textEditAbkZumSuchen.setText(zufallsAbk);
-        _buttonAbkSuche.performClick();
-    }
 
     /**
      * Virtuelles Keyboard wieder "einklappen". Lösung nach

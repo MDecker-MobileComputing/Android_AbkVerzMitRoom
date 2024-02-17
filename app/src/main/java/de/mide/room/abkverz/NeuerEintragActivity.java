@@ -48,6 +48,7 @@ public class NeuerEintragActivity extends AppCompatActivity {
         _dao = mdb.abkverzDao();
     }
 
+
     /**
      * Event-Handler für "Einfügen"-Button.
      *
@@ -94,6 +95,7 @@ public class NeuerEintragActivity extends AppCompatActivity {
         // eine weitere Bedeutung eingeben möchte.
         _bedeutungEditText.setText("");
     }
+
 
     /**
      * Event-Handler für Button zur Rückkehr zur {@code MainActivity}.
