@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+
 /**
  * Entity für Tabelle mit den Abkürzungen (aber nicht den Bedeutungen!); eine
  * Abkürzung kann eine oder mehrere Bedeutungen referenzieren. Eine Abkürzung

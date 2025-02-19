@@ -7,6 +7,7 @@ import androidx.room.Transaction;
 
 import java.util.List;
 
+
 /**
  * Data Access Object für Ausführung der CRUD-Operation auf den DB-Tabellen.
  * <br><br>

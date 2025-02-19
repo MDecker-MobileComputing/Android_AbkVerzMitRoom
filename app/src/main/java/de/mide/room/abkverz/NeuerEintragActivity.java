@@ -11,6 +11,7 @@ import de.mide.room.abkverz.db.AbkVerzDao;
 import de.mide.room.abkverz.db.BedeutungEntity;
 import de.mide.room.abkverz.db.MeineDatenbank;
 
+
 /**
  * Activity zum Anlegen von neuen Abkürzungen oder dem Hinzufügen von
  * neuen Bedeutungen zu bestehenden Abkürzungen.

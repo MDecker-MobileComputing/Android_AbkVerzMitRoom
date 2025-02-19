@@ -5,6 +5,7 @@ import androidx.room.Relation;
 
 import java.util.List;
 
+
 /**
  * Klasse für Definition der 1:N-Beziehung zwischen Abkürzungen und Bedeutungen, siehe auch
  * <a href="https://developer.android.com/training/data-storage/room/relationships#one-to-many">hier</a>.

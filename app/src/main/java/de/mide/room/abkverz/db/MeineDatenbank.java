@@ -7,6 +7,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+
 /**
  * Die Datenbank-Klasse enthält eine Getter-Methode für die DAOs.
  * In der Annotation für die Klasse selbst müssen unter dem Attribut {@code entities}
